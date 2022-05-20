@@ -1,0 +1,34 @@
+<!-- Natália Gabriele Santana Silva, 19/05/2022, LAB: 04-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+        button { padding: 30px;  }
+        body { font-size: 12pt; font: 12pt Arial;}
+    </style>
+    <!--Dados da tag style foram trocados para que fique visualmente mais proximo ao print enviado
+    no Teams. Adicionei o padding no button e font-size e font no body-->
+</head>
+<body>
+    <h1>Trabalhando com Dados</h1>
+    <button onclick="inicio()">Clique para começar</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado... </p>
+    </section>
+    <!--O Nome para chamar a função estava errado, igualei os nomes para ficarem iguais e 
+    assim conseguir chamar a funcao-->
+    <script>
+        function inicio() {
+            let nome = prompt('Qual é o seu nome?')
+            let res = document.getElementById('resultado')
+            
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596;`
+        }
+    </script>
+    <!--Para concatenar uma string com variavel o $ vem antes do {} e nao dentro, entao foi feita esta alteracao para assim
+    conseguir chamar a variavel "nome" e adicionado o "&" para funcionar o emote-->
+</body>
+</html>
